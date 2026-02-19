@@ -105,9 +105,37 @@ You can either:
 | Item        | Value                    |
 |------------|---------------------------|
 | FPGA       | Xilinx Zynq UltraScale+   |
-| Part       | **xczu3eg-sfvc784-2-e**   |
+| Part       | **xczu3eg-sfvc784-2-e**  |
 | Board      | RealDigital AUP-ZU3       |
 | Package    | SFVC784                   |
 | Speed grade| -2                        |
 
 Use this part in the Vivado project and in any Tcl scripts (e.g. `set part "xczu3eg-sfvc784-2-e"`).
+
+---
+
+## 10. Quick start (aup_zu3 folder)
+
+Files added under **aup_zu3/**:
+
+| File | Purpose |
+|------|--------|
+| **zu3_top.v** | Top-level: 100 MHz clock, buttons/switches/LEDs, instantiates `emu` |
+| **pll_xilinx.v** | Xilinx PLL replacement (same ports as `pll`; 50 MHz → 100/50 MHz) |
+| **hps_io_stub.sv** | Stub for `hps_io` (no ARM; default status/buttons) |
+| **ddram_stub.sv** | Stub for `ddram` (returns zeros; no real DDR) |
+| **build_id.v** | Defines `BUILD_DATE` for GBA.sv |
+| **zu3.xdc** | Constraints for LEDs, buttons, switches; **set 100 MHz clock pins from schematic** |
+| **scripts/create_project.tcl** | Creates Vivado project and adds sources |
+| **Makefile** | `make project`, `make synth`, `make impl` |
+
+**Steps:**
+
+1. **Set the 100 MHz clock pins** in `aup_zu3/zu3.xdc` (see comments there; use the board schematic or Reference Manual).
+2. From the repo root:
+   - `make -C aup_zu3 project` — create the project.
+   - `make -C aup_zu3 synth` — run synthesis (then fix any missing file or define).
+   - `make -C aup_zu3 impl` — run implementation and bitstream.
+3. Program the FPGA with the generated `.bit` file (e.g. via Vivado Hardware Manager).
+
+If the project fails to create (e.g. missing sys files), open `aup_zu3/scripts/create_project.tcl` and add any required `sys` or `rtl` files that are reported missing.
