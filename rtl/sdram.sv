@@ -23,7 +23,7 @@ module sdram
 	input             init,        // reset to initialize RAM
 	input             clk,         // clock ~100MHz
 
-	inout  reg [15:0] SDRAM_DQ,    // 16 bit bidirectional data bus
+	inout  wire [15:0] SDRAM_DQ,   // 16 bit bidirectional data bus
 	output reg [12:0] SDRAM_A,     // 13 bit multiplexed address bus
 	output            SDRAM_DQML,  // two byte masks
 	output            SDRAM_DQMH,  // 
@@ -90,6 +90,10 @@ wire [2:0] CMD_LOAD_MODE       = 3'b000;
 reg [13:0] refresh_count = startup_refresh_max - sdram_startup_cycles;
 reg  [2:0] command;
 reg        chip;
+reg [15:0] sdram_dq_out;
+reg        sdram_dq_oe;
+
+assign SDRAM_DQ = sdram_dq_oe ? sdram_dq_out : 16'bZ;
 
 localparam STATE_STARTUP = 0;
 localparam STATE_WAIT    = 1;
@@ -146,7 +150,8 @@ always @(posedge clk) begin
 	if(data_ready_delay3[1]) ch3_dout[15:08] <= dq_reg[7:0];
 	if(data_ready_delay3[1]) ch3_ready <= 1;
 
-	SDRAM_DQ <= 16'bZ;
+	sdram_dq_oe <= 0;
+	sdram_dq_out <= 16'b0;
 
 	command <= CMD_NOP;
 	case (state)
@@ -249,8 +254,9 @@ always @(posedge clk) begin
 		STATE_RW1: begin
 			SDRAM_A <= cas_addr;
 			if(saved_wr) begin
-				command  <= CMD_WRITE;
-				SDRAM_DQ <= saved_data[15:0];
+				command     <= CMD_WRITE;
+				sdram_dq_out <= saved_data[15:0];
+				sdram_dq_oe  <= 1;
 				if(!ch) begin
 					ch1_ready  <= 1;
 					state <= STATE_IDLE_2;
@@ -269,12 +275,13 @@ always @(posedge clk) begin
 		end
 
 		STATE_RW2: begin
+			sdram_dq_out <= saved_data[31:16];
+			sdram_dq_oe  <= 1;
 			if(ch == 1) begin
 				state       <= STATE_IDLE_2;
 				SDRAM_A[10] <= 1;
 				SDRAM_A[0]  <= 1;
 				command     <= CMD_WRITE;
-				SDRAM_DQ    <= saved_data[31:16];
 				ch2_ready   <= 1;
 			end
 			else begin
@@ -282,7 +289,6 @@ always @(posedge clk) begin
 				SDRAM_A[10] <= 1;
 				SDRAM_A[1]  <= 1;
 				command     <= CMD_WRITE;
-				SDRAM_DQ    <= saved_data[31:16];
 				ch3_ready   <= 1;
 			end
 		end

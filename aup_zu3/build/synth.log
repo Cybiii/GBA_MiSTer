@@ -1,0 +1,328 @@
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Wed Feb 18 21:02:04 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /scratch/cs199-akc/GBA_MiSTer/aup_zu3/scripts/run_synth.tcl
+# open_project [file join [pwd] "gba_zu3.xpr"]
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/scratch/cs199-akc/GBA_MiSTer/aup_zu3/build/gba_zu3.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.7 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.7/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.5 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.5/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.3 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.3/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.4 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.4/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.2 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.3 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.3/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.1 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.2 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.2/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.0 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek385/1.0/board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.1 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek385/1.1/board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385_1:part0:1.0 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek385_2/1.0/board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.2 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.2/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.3 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.3/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.2 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.2/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.0 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vrk160/1.0/board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.1 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vrk160/1.1/board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.5 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.5/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /share/instsww/xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Project 1-5713] Board part '' set for the project  is not found. BoardPart property will be unset. Please select board from latest repo build 
+open_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1867.602 ; gain = 68.047 ; free physical = 244021 ; free virtual = 730592
+# reset_run synth_1
+# launch_runs synth_1 -jobs 4
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Wed Feb 18 21:03:16 2026] Launched synth_1...
+Run output will be captured here: /scratch/cs199-akc/GBA_MiSTer/aup_zu3/build/gba_zu3.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:24 ; elapsed = 00:01:03 . Memory (MB): peak = 1867.602 ; gain = 0.000 ; free physical = 243177 ; free virtual = 729748
+# wait_on_run synth_1
+[Wed Feb 18 21:03:16 2026] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log zu3_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source zu3_top.tcl
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Wed Feb 18 21:02:18 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source zu3_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1868.402 ; gain = 119.047 ; free physical = 242802 ; free virtual = 729373
+Command: synth_design -top zu3_top -part xczu3eg-sfvc784-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Device 21-403] Loading part xczu3eg-sfvc784-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 116772
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2943.688 ; gain = 148.625 ; free physical = 241382 ; free virtual = 727953
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'cart_download', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:353]
+INFO: [Synth 8-11241] undeclared symbol 'statusUpdate', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:353]
+INFO: [Synth 8-11241] undeclared symbol 'ss_info_req', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:355]
+INFO: [Synth 8-11241] undeclared symbol 'ss_info', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:356]
+WARNING: [Synth 8-8895] 'cart_download' is already implicitly declared on line 353 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:390]
+WARNING: [Synth 8-8895] 'ss_info' is already implicitly declared on line 356 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:442]
+WARNING: [Synth 8-8895] 'ss_info_req' is already implicitly declared on line 355 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:443]
+WARNING: [Synth 8-8895] 'statusUpdate' is already implicitly declared on line 353 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:444]
+INFO: [Synth 8-11241] undeclared symbol 'romcopy_active', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:540]
+INFO: [Synth 8-11241] undeclared symbol 'sram_quirk', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:549]
+INFO: [Synth 8-11241] undeclared symbol 'memory_remap_quirk', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:550]
+INFO: [Synth 8-11241] undeclared symbol 'sprite_quirk', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:555]
+INFO: [Synth 8-11241] undeclared symbol 'shadercolors', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:558]
+INFO: [Synth 8-11241] undeclared symbol 'gpio_quirk', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:559]
+INFO: [Synth 8-11241] undeclared symbol 'tilt_quirk', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:561]
+INFO: [Synth 8-11241] undeclared symbol 'gg_reset', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:575]
+INFO: [Synth 8-11241] undeclared symbol 'gg_valid', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:577]
+INFO: [Synth 8-11241] undeclared symbol 'gg_code', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:578]
+INFO: [Synth 8-11241] undeclared symbol 'gg_active', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:579]
+INFO: [Synth 8-11241] undeclared symbol 'sdram_req', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:581]
+INFO: [Synth 8-11241] undeclared symbol 'sdram_ack', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:582]
+INFO: [Synth 8-11241] undeclared symbol 'sdram_addr', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:583]
+INFO: [Synth 8-11241] undeclared symbol 'sdram_dout1', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:584]
+INFO: [Synth 8-11241] undeclared symbol 'sdram_dout2', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:585]
+INFO: [Synth 8-11241] undeclared symbol 'bus_din', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:587]
+INFO: [Synth 8-11241] undeclared symbol 'bus_dout', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:588]
+INFO: [Synth 8-11241] undeclared symbol 'bus_addr', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:589]
+INFO: [Synth 8-11241] undeclared symbol 'bus_rd', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:590]
+INFO: [Synth 8-11241] undeclared symbol 'bus_req', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:591]
+INFO: [Synth 8-11241] undeclared symbol 'bus_ack', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:592]
+INFO: [Synth 8-11241] undeclared symbol 'ss_din', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:594]
+INFO: [Synth 8-11241] undeclared symbol 'ss_dout', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:595]
+INFO: [Synth 8-11241] undeclared symbol 'ss_addr', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:596]
+INFO: [Synth 8-11241] undeclared symbol 'ss_rnw', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:597]
+INFO: [Synth 8-11241] undeclared symbol 'ss_req', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:598]
+INFO: [Synth 8-11241] undeclared symbol 'ss_be', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:599]
+INFO: [Synth 8-11241] undeclared symbol 'ss_ack', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:600]
+INFO: [Synth 8-11241] undeclared symbol 'pixel_addr', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:625]
+INFO: [Synth 8-11241] undeclared symbol 'pixel_data', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:626]
+INFO: [Synth 8-11241] undeclared symbol 'pixel_we', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:627]
+INFO: [Synth 8-11241] undeclared symbol 'fb_addr', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:630]
+INFO: [Synth 8-11241] undeclared symbol 'fb_din', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:631]
+INFO: [Synth 8-11241] undeclared symbol 'fb_req', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:632]
+INFO: [Synth 8-11241] undeclared symbol 'fb_ack', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:633]
+WARNING: [Synth 8-8895] 'sram_quirk' is already implicitly declared on line 549 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:646]
+WARNING: [Synth 8-8895] 'memory_remap_quirk' is already implicitly declared on line 550 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:647]
+WARNING: [Synth 8-8895] 'gpio_quirk' is already implicitly declared on line 559 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:648]
+WARNING: [Synth 8-8895] 'tilt_quirk' is already implicitly declared on line 561 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:649]
+WARNING: [Synth 8-8895] 'sprite_quirk' is already implicitly declared on line 555 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:651]
+WARNING: [Synth 8-8895] 'sdram_addr' is already implicitly declared on line 583 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:756]
+WARNING: [Synth 8-8895] 'sdram_dout1' is already implicitly declared on line 584 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:757]
+WARNING: [Synth 8-8895] 'sdram_dout2' is already implicitly declared on line 585 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:758]
+WARNING: [Synth 8-8895] 'sdram_ack' is already implicitly declared on line 582 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:759]
+WARNING: [Synth 8-8895] 'sdram_req' is already implicitly declared on line 581 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:760]
+WARNING: [Synth 8-8895] 'bus_addr' is already implicitly declared on line 589 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:762]
+WARNING: [Synth 8-8895] 'bus_din' is already implicitly declared on line 587 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:763]
+WARNING: [Synth 8-8895] 'bus_dout' is already implicitly declared on line 588 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:764]
+WARNING: [Synth 8-8895] 'bus_ack' is already implicitly declared on line 592 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:765]
+WARNING: [Synth 8-8895] 'bus_rd' is already implicitly declared on line 590 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:766]
+WARNING: [Synth 8-8895] 'bus_req' is already implicitly declared on line 591 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:766]
+WARNING: [Synth 8-8895] 'fb_addr' is already implicitly declared on line 630 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:772]
+WARNING: [Synth 8-8895] 'fb_din' is already implicitly declared on line 631 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:773]
+WARNING: [Synth 8-8895] 'fb_req' is already implicitly declared on line 632 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:774]
+WARNING: [Synth 8-8895] 'fb_ack' is already implicitly declared on line 633 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:775]
+INFO: [Synth 8-11241] undeclared symbol 'romcopysd_active', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:790]
+INFO: [Synth 8-11241] undeclared symbol 'romcopy_data', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:791]
+INFO: [Synth 8-11241] undeclared symbol 'romcopysd_req', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:793]
+INFO: [Synth 8-11241] undeclared symbol 'bram_addr', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:797]
+INFO: [Synth 8-11241] undeclared symbol 'bram_dout', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:798]
+INFO: [Synth 8-11241] undeclared symbol 'bram_req', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:800]
+INFO: [Synth 8-11241] undeclared symbol 'bk_loading', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:801]
+INFO: [Synth 8-11241] undeclared symbol 'extra_data_addr', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:801]
+WARNING: [Synth 8-8895] 'ss_dout' is already implicitly declared on line 595 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:817]
+WARNING: [Synth 8-8895] 'ss_din' is already implicitly declared on line 594 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:817]
+WARNING: [Synth 8-8895] 'ss_addr' is already implicitly declared on line 596 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:818]
+WARNING: [Synth 8-8895] 'ss_be' is already implicitly declared on line 599 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:819]
+WARNING: [Synth 8-8895] 'ss_rnw' is already implicitly declared on line 597 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:820]
+WARNING: [Synth 8-8895] 'ss_req' is already implicitly declared on line 598 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:820]
+WARNING: [Synth 8-8895] 'ss_ack' is already implicitly declared on line 600 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:820]
+INFO: [Synth 8-11241] undeclared symbol 'romcopy_ddrreq', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:830]
+INFO: [Synth 8-11241] undeclared symbol 'gamma_en', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:857]
+INFO: [Synth 8-11241] undeclared symbol 'fb_gamma_din', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:857]
+INFO: [Synth 8-11241] undeclared symbol 'fb_ddr3_req', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:858]
+WARNING: [Synth 8-8895] 'gamma_en' is already implicitly declared on line 857 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:871]
+WARNING: [Synth 8-8895] 'fb_gamma_din' is already implicitly declared on line 857 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:876]
+WARNING: [Synth 8-8895] 'fb_ddr3_req' is already implicitly declared on line 858 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:877]
+WARNING: [Synth 8-8895] 'romcopy_active' is already implicitly declared on line 540 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:916]
+WARNING: [Synth 8-8895] 'romcopy_ddrreq' is already implicitly declared on line 830 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:919]
+WARNING: [Synth 8-8895] 'romcopysd_active' is already implicitly declared on line 790 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:965]
+WARNING: [Synth 8-8895] 'romcopysd_req' is already implicitly declared on line 793 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:966]
+WARNING: [Synth 8-8895] 'romcopy_data' is already implicitly declared on line 791 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:967]
+WARNING: [Synth 8-8895] 'bram_dout' is already implicitly declared on line 798 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:1032]
+WARNING: [Synth 8-8895] 'bram_addr' is already implicitly declared on line 797 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:1084]
+WARNING: [Synth 8-8895] 'bram_req' is already implicitly declared on line 800 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:1087]
+WARNING: [Synth 8-8895] 'pixel_addr' is already implicitly declared on line 625 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:1113]
+WARNING: [Synth 8-8895] 'pixel_data' is already implicitly declared on line 626 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:1114]
+WARNING: [Synth 8-8895] 'pixel_we' is already implicitly declared on line 627 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:1115]
+WARNING: [Synth 8-8895] 'shadercolors' is already implicitly declared on line 558 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:1254]
+WARNING: [Synth 8-8895] 'bk_loading' is already implicitly declared on line 801 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:1304]
+WARNING: [Synth 8-8895] 'extra_data_addr' is already implicitly declared on line 801 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:1308]
+WARNING: [Synth 8-8895] 'gg_code' is already implicitly declared on line 578 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:1436]
+WARNING: [Synth 8-8895] 'gg_valid' is already implicitly declared on line 577 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:1437]
+WARNING: [Synth 8-8895] 'gg_reset' is already implicitly declared on line 575 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:1438]
+WARNING: [Synth 8-8895] 'gg_active' is already implicitly declared on line 579 [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:1440]
+WARNING: [Synth 8-6901] identifier 'status' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:185]
+WARNING: [Synth 8-6901] identifier 'cart_download' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:187]
+WARNING: [Synth 8-6901] identifier 'bk_pending' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:187]
+WARNING: [Synth 8-6901] identifier 'status' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:199]
+WARNING: [Synth 8-6901] identifier 'status' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:199]
+WARNING: [Synth 8-6901] identifier 'buttons' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:221]
+WARNING: [Synth 8-6901] identifier 'status' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:221]
+WARNING: [Synth 8-6901] identifier 'cart_download' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:221]
+WARNING: [Synth 8-6901] identifier 'bk_loading' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:221]
+WARNING: [Synth 8-6901] identifier 'hold_reset' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:221]
+WARNING: [Synth 8-6901] identifier 'solar_quirk' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:305]
+WARNING: [Synth 8-6901] identifier 'cart_loaded' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:305]
+WARNING: [Synth 8-6901] identifier 'cart_type' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:305]
+WARNING: [Synth 8-6901] identifier 'force_turbo' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:305]
+WARNING: [Synth 8-6901] identifier 'gg_active' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:305]
+WARNING: [Synth 8-6901] identifier 'bk_ena' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:305]
+WARNING: [Synth 8-6901] identifier 'cart_download' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:337]
+WARNING: [Synth 8-6901] identifier 'ss_slot' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:337]
+WARNING: [Synth 8-6901] identifier 'ss_slot' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:337]
+WARNING: [Synth 8-6901] identifier 'ioctl_download_1' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:408]
+WARNING: [Synth 8-6901] identifier 'rom_wr' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:414]
+WARNING: [Synth 8-6901] identifier 'rom_dout' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:415]
+WARNING: [Synth 8-6901] identifier 'rom_dout' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:416]
+WARNING: [Synth 8-6901] identifier 'rom_dout' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:416]
+WARNING: [Synth 8-6901] identifier 'rom_dout' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:418]
+WARNING: [Synth 8-6901] identifier 'rom_dout' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:418]
+WARNING: [Synth 8-6901] identifier 'force_pause' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:503]
+WARNING: [Synth 8-6901] identifier 'ioctl_download_1' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:655]
+WARNING: [Synth 8-6901] identifier 'rom_wr' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:664]
+WARNING: [Synth 8-6901] identifier 'rom_addr' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:665]
+WARNING: [Synth 8-6901] identifier 'rom_addr' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:666]
+WARNING: [Synth 8-6901] identifier 'rom_addr' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:666]
+WARNING: [Synth 8-6901] identifier 'rom_dout' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:666]
+WARNING: [Synth 8-6901] identifier 'rom_dout' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:666]
+WARNING: [Synth 8-6901] identifier 'rom_addr' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:668]
+WARNING: [Synth 8-6901] identifier 'sdr_sdram_dout1' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:757]
+WARNING: [Synth 8-6901] identifier 'ddr_sdram_dout1' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:757]
+WARNING: [Synth 8-6901] identifier 'sdr_sdram_dout2' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:758]
+WARNING: [Synth 8-6901] identifier 'ddr_sdram_dout2' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:758]
+WARNING: [Synth 8-6901] identifier 'sdr_sdram_ack' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:759]
+WARNING: [Synth 8-6901] identifier 'ddr_sdram_ack' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:759]
+WARNING: [Synth 8-6901] identifier 'sdr_bus_dout' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:764]
+WARNING: [Synth 8-6901] identifier 'ddr_bus_dout' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:764]
+WARNING: [Synth 8-6901] identifier 'sdr_bus_ack' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:765]
+WARNING: [Synth 8-6901] identifier 'ddr_bus_ack' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:765]
+WARNING: [Synth 8-6901] identifier 'ioctl_download_1' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:927]
+WARNING: [Synth 8-6901] identifier 'romcopysd_state' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:953]
+WARNING: [Synth 8-6901] identifier 'STATE_ROMCOPYSD_IDLE' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:953]
+WARNING: [Synth 8-6901] identifier 'ioctl_download_1' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:983]
+WARNING: [Synth 8-6901] identifier 'bram_buff_out' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:1035]
+WARNING: [Synth 8-6901] identifier 'rgb' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:1130]
+WARNING: [Synth 8-6901] identifier 'sl' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:1215]
+WARNING: [Synth 8-6901] identifier 'desatcolors' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:1230]
+WARNING: [Synth 8-6901] identifier 'save_sz' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:1308]
+WARNING: [Synth 8-6901] identifier 'bk_state' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:1312]
+WARNING: [Synth 8-10180] variable 'old_load' must explicitly be declared as automatic or static [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:1344]
+WARNING: [Synth 8-10180] variable 'old_save' must explicitly be declared as automatic or static [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:1344]
+WARNING: [Synth 8-10180] variable 'old_save_a' must explicitly be declared as automatic or static [/scratch/cs199-akc/GBA_MiSTer/GBA.sv:1344]
+WARNING: [Synth 8-6901] identifier 'gamma' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/sys/gamma_corr.sv:25]
+WARNING: [Synth 8-6901] identifier 'gamma_index' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/sys/gamma_corr.sv:25]
+WARNING: [Synth 8-10180] variable 'ctr' must explicitly be declared as automatic or static [/scratch/cs199-akc/GBA_MiSTer/sys/gamma_corr.sv:34]
+INFO: [Synth 8-11241] undeclared symbol 'offs', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/sys/hq2x.sv:105]
+WARNING: [Synth 8-8895] 'offs' is already implicitly declared on line 105 [/scratch/cs199-akc/GBA_MiSTer/sys/hq2x.sv:148]
+WARNING: [Synth 8-6901] identifier 'DWIDTH' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/sys/hq2x.sv:18]
+WARNING: [Synth 8-6901] identifier 'DWIDTH' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/sys/hq2x.sv:27]
+WARNING: [Synth 8-6901] identifier 'nextpatt' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/sys/hq2x.sv:57]
+WARNING: [Synth 8-6901] identifier 'AWIDTH' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/sys/hq2x.sv:230]
+WARNING: [Synth 8-6901] identifier 'AWIDTH' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/sys/hq2x.sv:234]
+WARNING: [Synth 8-10180] variable 'alt' must explicitly be declared as automatic or static [/scratch/cs199-akc/GBA_MiSTer/rtl/savestate_ui.sv:43]
+WARNING: [Synth 8-6901] identifier 'chip' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/rtl/sdram.sv:60]
+WARNING: [Synth 8-6901] identifier 'command' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/rtl/sdram.sv:61]
+WARNING: [Synth 8-6901] identifier 'command' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/rtl/sdram.sv:62]
+WARNING: [Synth 8-6901] identifier 'command' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/rtl/sdram.sv:63]
+WARNING: [Synth 8-10180] variable 'state' must explicitly be declared as automatic or static [/scratch/cs199-akc/GBA_MiSTer/rtl/sdram.sv:118]
+INFO: [Synth 8-11241] undeclared symbol 'R_in', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/sys/video_mixer.sv:124]
+INFO: [Synth 8-11241] undeclared symbol 'G_in', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/sys/video_mixer.sv:124]
+INFO: [Synth 8-11241] undeclared symbol 'B_in', assumed default net type 'wire' [/scratch/cs199-akc/GBA_MiSTer/sys/video_mixer.sv:124]
+WARNING: [Synth 8-6901] identifier 'DWIDTH' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/sys/video_mixer.sv:37]
+WARNING: [Synth 8-6901] identifier 'DWIDTH' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/sys/video_mixer.sv:38]
+WARNING: [Synth 8-6901] identifier 'DWIDTH' is used before its declaration [/scratch/cs199-akc/GBA_MiSTer/sys/video_mixer.sv:39]
+ERROR: [Synth 8-36] 'R_in' is not declared [/scratch/cs199-akc/GBA_MiSTer/sys/video_mixer.sv:134]
+ERROR: [Synth 8-36] 'G_in' is not declared [/scratch/cs199-akc/GBA_MiSTer/sys/video_mixer.sv:134]
+ERROR: [Synth 8-36] 'B_in' is not declared [/scratch/cs199-akc/GBA_MiSTer/sys/video_mixer.sv:134]
+INFO: [Synth 8-10285] module 'video_mixer' is ignored due to previous errors [/scratch/cs199-akc/GBA_MiSTer/sys/video_mixer.sv:219]
+INFO: [Synth 8-9084] Verilog file '/scratch/cs199-akc/GBA_MiSTer/sys/video_mixer.sv' ignored due to errors
+ERROR: [Synth 8-12188] Failed to read verilog '/scratch/cs199-akc/GBA_MiSTer/sys/video_mixer.sv'
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3025.625 ; gain = 230.562 ; free physical = 241285 ; free virtual = 727856
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+64 Infos, 128 Warnings, 0 Critical Warnings and 5 Errors encountered.
+synth_design failed
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:33 . Memory (MB): peak = 3025.633 ; gain = 1157.230 ; free physical = 241285 ; free virtual = 727856
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2194.023; main = 1895.815; forked = 298.208
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4666.816; main = 3025.629; forked = 1641.188
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Wed Feb 18 21:03:01 2026...
+[Wed Feb 18 21:03:16 2026] synth_1 finished
+ERROR: [Vivado 12-13638] Failed runs(s) : 'synth_1'
+ERROR: [Common 17-39] 'wait_on_runs' failed due to earlier errors.
+
+    while executing
+"wait_on_run synth_1"
+    (file "/scratch/cs199-akc/GBA_MiSTer/aup_zu3/scripts/run_synth.tcl" line 5)
+INFO: [Common 17-206] Exiting Vivado at Wed Feb 18 21:03:16 2026...

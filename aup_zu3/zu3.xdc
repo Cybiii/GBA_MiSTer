@@ -13,18 +13,13 @@ set_property BITSTREAM.GENERAL.COMPRESS TRUE [current_design]
 # Create project with: set part "xczu3eg-sfvc784-2-e"
 
 #----------------------------------------------------------------------------
-# 100 MHz reference clock (differential)
-# Set CLK_100_P / CLK_100_N to the actual PL clock pins from board schematic.
-# Many ZU3 boards use a 100 MHz or 33.33 MHz oscillator; check Reference Manual.
+# 100 MHz reference clock (differential) - AUP-ZU3 (same as EECS 151 lab2/lab5)
 #----------------------------------------------------------------------------
-# Example placeholder - REPLACE with your board's clock pins, then uncomment:
-# set_property PACKAGE_PIN <pin_p> [get_ports CLK_100_P]
-# set_property PACKAGE_PIN <pin_n> [get_ports CLK_100_N]
-# set_property IOSTANDARD LVDS [get_ports {CLK_100_P CLK_100_N}]
-# create_clock -period 10.000 -name sys_clk_100 [get_ports CLK_100_P]
-
-# If your board has a single-ended 100 MHz clock, use IBUF in zu3_top and:
-# create_clock -period 10.000 -name sys_clk [get_ports CLK_100]
+set_property PACKAGE_PIN D7 [get_ports CLK_100_P]
+set_property PACKAGE_PIN D6 [get_ports CLK_100_N]
+set_property IOSTANDARD LVDS [get_ports CLK_100_P]
+set_property IOSTANDARD LVDS [get_ports CLK_100_N]
+create_clock -period 10.000 -name sys_clk_100 [get_ports CLK_100_P]
 
 #----------------------------------------------------------------------------
 # White LEDs (8) - RealDigital AUP-ZU3

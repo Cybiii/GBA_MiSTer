@@ -1126,9 +1126,8 @@ end
 
 reg [17:0] vram[38400];
 always @(posedge clk_sys) if(pixel_we) vram[pixel_addr] <= pixel_data;
+reg [15:0] px_addr;
 always @(posedge CLK_VIDEO) rgb <= vram[px_addr];
-
-wire [15:0] px_addr;
 reg  [17:0] rgb;
 wire sync_core = ~status[39];
 
@@ -1226,7 +1225,7 @@ wire [7:0] b_in = {b,b[5:4]};
 //wire [7:0] luma = r_in[7:3] + g_in[7:1] + g_in[7:2] + b_in[7:3];
 wire [7:0] luma = r_in[7:2] + g_in[7:1] + g_in[7:3] + b_in[7:3];
 
-wire [7:0] r_out, g_out, b_out;
+logic [7:0] r_out, g_out, b_out;
 always_comb begin
 	case(desatcolors)
 		0: begin
