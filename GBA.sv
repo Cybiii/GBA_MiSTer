@@ -1029,57 +1029,22 @@ end
 /////////////////
 
 wire [127:0] time_din_h = {32'd0, time_din, "RT"};
-wire [15:0] bram_dout;
+reg [15:0] bram_dout;
 wire [15:0] bram_din = sdram_en ? sdr_bram_din : ddr_bram_din;
 wire        bram_ack = sdram_en ? sdr_bram_ack : ddr_bram_ack;
 assign sd_buff_din = extra_data_addr ? (time_din_h[{sd_buff_addr[2:0], 4'b0000} +: 16]) : bram_buff_out;
-wire [15:0] bram_buff_out;
+reg [15:0] bram_buff_out;
 
-altsyncram	altsyncram_component
-(
-	.address_a (bram_addr),
-	.address_b (sd_buff_addr),
-	.clock0 (clk_sys),
-	.clock1 (clk_sys),
-	.data_a (bram_din),
-	.data_b (sd_buff_dout),
-	.wren_a (~bk_loading & bram_ack),
-	.wren_b (sd_buff_wr && ~extra_data_addr),
-	.q_a (bram_dout),
-	.q_b (bram_buff_out),
-	.byteena_a (1'b1),
-	.byteena_b (1'b1),
-	.clocken0 (1'b1),
-	.clocken1 (1'b1),
-	.rden_a (1'b1),
-	.rden_b (1'b1)
-);
-defparam
-	altsyncram_component.address_reg_b = "CLOCK1",
-	altsyncram_component.clock_enable_input_a = "BYPASS",
-	altsyncram_component.clock_enable_input_b = "BYPASS",
-	altsyncram_component.clock_enable_output_a = "BYPASS",
-	altsyncram_component.clock_enable_output_b = "BYPASS",
-	altsyncram_component.indata_reg_b = "CLOCK1",
-	altsyncram_component.intended_device_family = "Cyclone V",
-	altsyncram_component.lpm_type = "altsyncram",
-	altsyncram_component.numwords_a = 256,
-	altsyncram_component.numwords_b = 256,
-	altsyncram_component.operation_mode = "BIDIR_DUAL_PORT",
-	altsyncram_component.outdata_aclr_a = "NONE",
-	altsyncram_component.outdata_aclr_b = "NONE",
-	altsyncram_component.outdata_reg_a = "UNREGISTERED",
-	altsyncram_component.outdata_reg_b = "UNREGISTERED",
-	altsyncram_component.power_up_uninitialized = "FALSE",
-	altsyncram_component.read_during_write_mode_port_a = "NEW_DATA_NO_NBE_READ",
-	altsyncram_component.read_during_write_mode_port_b = "NEW_DATA_NO_NBE_READ",
-	altsyncram_component.widthad_a = 8,
-	altsyncram_component.widthad_b = 8,
-	altsyncram_component.width_a = 16,
-	altsyncram_component.width_b = 16,
-	altsyncram_component.width_byteena_a = 1,
-	altsyncram_component.width_byteena_b = 1,
-	altsyncram_component.wrcontrol_wraddress_reg_b = "CLOCK1";
+// Dual-port block RAM (Xilinx-inferrable; replaces Altera altsyncram)
+reg [15:0] bram_ram [0:255];
+always @(posedge clk_sys) begin
+	if (~bk_loading & bram_ack)
+		bram_ram[bram_addr] <= bram_din;
+	bram_dout <= bram_ram[bram_addr];
+	if (sd_buff_wr && ~extra_data_addr)
+		bram_ram[sd_buff_addr] <= sd_buff_dout;
+	bram_buff_out <= bram_ram[sd_buff_addr];
+end
 
 reg [7:0] bram_addr;
 reg bram_tx_start;

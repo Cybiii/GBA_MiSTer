@@ -31,12 +31,14 @@ architecture rtl of SyncRamDualNotPow2 is
    subtype word_t is std_logic_vector((DATA_WIDTH-1) downto 0);
    type memory_t is array(0 to DATA_COUNT-1) of word_t;
 
-   -- Declare the RAM 
+   -- Declare the RAM
    signal ram : memory_t := (others => (others => '0'));
+   attribute ram_style : string;
+   attribute ram_style of ram : signal is "block";
 
 begin
 
-   -- Port A
+   -- Port A and B: one process, true dual-port (two writes per cycle when addr_a /= addr_b)
    process(clk)
    begin
       if(rising_edge(clk)) then 

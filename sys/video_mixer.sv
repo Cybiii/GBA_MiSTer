@@ -63,6 +63,8 @@ localparam DWIDTH = HALF_DEPTH ? 3 : 7;
 localparam DWIDTH_SD = GAMMA ? 7 : DWIDTH;
 localparam HALF_DEPTH_SD = GAMMA ? 0 : HALF_DEPTH;
 
+wire [7:0] R_in, G_in, B_in;
+
 wire frz_hs, frz_vs;
 wire frz_hbl, frz_vbl;
 video_freezer freezer
@@ -90,13 +92,13 @@ end
 
 generate
 	if(GAMMA && HALF_DEPTH) begin
-		wire [7:0] R_in  = frz ? 8'd0 : {R,R};
-		wire [7:0] G_in  = frz ? 8'd0 : {G,G};
-		wire [7:0] B_in  = frz ? 8'd0 : {B,B};
+		assign R_in = frz ? 8'd0 : {R,R};
+		assign G_in = frz ? 8'd0 : {G,G};
+		assign B_in = frz ? 8'd0 : {B,B};
 	end else begin
-		wire [DWIDTH:0] R_in = frz ? 1'd0 : R;
-		wire [DWIDTH:0] G_in = frz ? 1'd0 : G;
-		wire [DWIDTH:0] B_in = frz ? 1'd0 : B;
+		assign R_in = frz ? 8'd0 : {{(7-DWIDTH){1'b0}}, R};
+		assign G_in = frz ? 8'd0 : {{(7-DWIDTH){1'b0}}, G};
+		assign B_in = frz ? 8'd0 : {{(7-DWIDTH){1'b0}}, B};
 	end
 endgenerate
 

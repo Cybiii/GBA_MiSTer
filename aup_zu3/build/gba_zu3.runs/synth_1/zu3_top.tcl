@@ -91,11 +91,13 @@ read_verilog {
   /scratch/cs199-akc/GBA_MiSTer/aup_zu3/build_id.v
   /scratch/cs199-akc/GBA_MiSTer/aup_zu3/zu3_top.v
 }
-read_vhdl -library work {
+read_vhdl -library MEM {
   /scratch/cs199-akc/GBA_MiSTer/rtl/SyncFifo.vhd
   /scratch/cs199-akc/GBA_MiSTer/rtl/SyncRamDual.vhd
   /scratch/cs199-akc/GBA_MiSTer/rtl/SyncRamDualByteEnable.vhd
   /scratch/cs199-akc/GBA_MiSTer/rtl/SyncRamDualNotPow2.vhd
+}
+read_vhdl -library work {
   /scratch/cs199-akc/GBA_MiSTer/rtl/cache.vhd
   /scratch/cs199-akc/GBA_MiSTer/rtl/gba_bios.vhd
   /scratch/cs199-akc/GBA_MiSTer/rtl/proc_bus_gba.vhd

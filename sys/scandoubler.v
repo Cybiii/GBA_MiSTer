@@ -19,7 +19,7 @@
 
 // TODO: Delay vsync one line
 
-module scandoubler #(parameter LENGTH, parameter HALF_DEPTH)
+module scandoubler #(parameter LENGTH = 768, parameter HALF_DEPTH = 0)
 (
 	// system interface
 	input             clk_vid,
@@ -56,9 +56,8 @@ wire [7:0] pc_in = pix_in_cnt + 1'b1;
 reg  [7:0] pixsz, pixsz2, pixsz4 = 0;
 
 reg ce_x4i, ce_x1i;
+reg old_ce, valid, hs_in_prev;
 always @(posedge clk_vid) begin
-	reg old_ce, valid, hs;
-
 	if(~&pix_len) pix_len <= pl;
 	if(~&pix_in_cnt) pix_in_cnt <= pc_in;
 
@@ -79,8 +78,8 @@ always @(posedge clk_vid) begin
 		valid <= 1;
 	end
 
-	hs <= hs_in;
-	if((~hs & hs_in) || (pc_in >= pixsz)) begin
+	hs_in_prev <= hs_in;
+	if((~hs_in_prev & hs_in) || (pc_in >= pixsz)) begin
 		ce_x4i <= 1;
 		ce_x1i <= 1;
 		pix_in_cnt <= 0;
@@ -120,9 +119,8 @@ reg  [7:0] pix_out_cnt = 0;
 wire [7:0] pc_out = pix_out_cnt + 1'b1;
 
 reg ce_x4o, ce_x2o;
+reg hs_out_prev;
 always @(posedge clk_vid) begin
-	reg hs;
-
 	if(~&pix_out_cnt) pix_out_cnt <= pc_out;
 
 	ce_x4o <= 0;
@@ -132,8 +130,8 @@ always @(posedge clk_vid) begin
 	if((pc_out == pixsz4) || (pc_out == pixsz2) || (pc_out == (pixsz2+pixsz4))) ce_x4o <= 1;
 	if( pc_out == pixsz2) ce_x2o <= 1;
 
-	hs <= hs_out;
-	if((~hs & hs_out) || (pc_out >= pixsz)) begin
+	hs_out_prev <= hs_out;
+	if((~hs_out_prev & hs_out) || (pc_out >= pixsz)) begin
 		ce_x2o <= 1;
 		ce_x4o <= 1;
 		pix_out_cnt <= 0;
@@ -144,15 +142,12 @@ reg [1:0] sd_line;
 reg [3:0] vbo;
 reg [3:0] vso;
 reg [8:0] hbo;
+reg [31:0] hcnt;
+reg [30:0] sd_hcnt;
+reg [30:0] hs_start, hs_end;
+reg [30:0] hde_start, hde_end;
+reg sd_hs, sd_hb;
 always @(posedge clk_vid) begin
-
-	reg [31:0] hcnt;
-	reg [30:0] sd_hcnt;
-	reg [30:0] hs_start, hs_end;
-	reg [30:0] hde_start, hde_end;
-
-	reg hs, hb;
-
 	if(ce_x4o) begin
 		hbo[8:1] <= hbo[7:0];
 	end
@@ -177,11 +172,11 @@ always @(posedge clk_vid) begin
 	if(sd_hcnt == hs_end)   hs_out <= 0;
 	if(sd_hcnt == hs_start) hs_out <= 1;
 
-	hs <= hs_in;
-	hb <= hb_in;
+	sd_hs <= hs_in;
+	sd_hb <= hb_in;
 
 	hcnt <= hcnt + 1'd1;
-	if(hb && !hb_in) begin
+	if(sd_hb && !hb_in) begin
 		hde_start <= hcnt[31:1];
 		hbo[0] <= 0;
 		hcnt <= 0;
@@ -189,16 +184,16 @@ always @(posedge clk_vid) begin
 		vbo <= {vbo[2:0],vb_in};
 	end
 
-	if(!hb && hb_in) hde_end <= hcnt[31:1];
+	if(!sd_hb && hb_in) hde_end <= hcnt[31:1];
 
 	// falling edge of hsync indicates start of line
-	if(hs && !hs_in) begin
+	if(sd_hs && !hs_in) begin
 		hs_end <= hcnt[31:1];
 		vso[0] <= vs_in;
 	end
 
 	// save position of rising edge
-	if(!hs && hs_in) hs_start <= hcnt[31:1];
+	if(!sd_hs && hs_in) hs_start <= hcnt[31:1];
 end
 
 assign vs_out = vso[3];

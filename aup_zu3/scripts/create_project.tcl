@@ -39,6 +39,13 @@ add_files -norecurse [file join $repo_root "GBA.sv"]
 foreach f [glob -nocomplain [file join $rtl_dir "*.vhd"]] {
 	add_files -norecurse $f
 }
+# VHDL entities referenced as MEM.* must be compiled into library MEM
+foreach f [list SyncRam.vhd SyncRamDual.vhd SyncRamDualByteEnable.vhd SyncRamDualNotPow2.vhd SyncFifo.vhd] {
+	set fpath [file join $rtl_dir $f]
+	if { [file exists $fpath] } {
+		set_property library MEM [get_files -of_objects [current_fileset] $fpath]
+	}
+}
 foreach f [glob -nocomplain [file join $rtl_dir "*.sv"]] {
 	if { [string match "*ddram*" $f] } { continue }
 	add_files -norecurse $f

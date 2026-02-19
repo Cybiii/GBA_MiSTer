@@ -300,29 +300,18 @@ always @(posedge clk) begin
 	end
 end
 
-altddio_out
-#(
-	.extend_oe_disable("OFF"),
-	.intended_device_family("Cyclone V"),
-	.invert_output("OFF"),
-	.lpm_hint("UNUSED"),
-	.lpm_type("altddio_out"),
-	.oe_reg("UNREGISTERED"),
-	.power_up_high("OFF"),
-	.width(1)
-)
-sdramclk_ddr
-(
-	.datain_h(1'b0),
-	.datain_l(1'b1),
-	.outclock(clk),
-	.dataout(SDRAM_CLK),
-	.aclr(1'b0),
-	.aset(1'b0),
-	.oe(1'b1),
-	.outclocken(1'b1),
-	.sclr(1'b0),
-	.sset(1'b0)
+// Xilinx ODDRE1 for SDRAM clock output on UltraScale+ (replaces Altera altddio_out)
+// D1=1, D2=0 yields a toggling clock at C rate; SRVAL sets power-up state
+ODDRE1 #(
+	.IS_C_INVERTED(1'b0),
+	.SIM_DEVICE("ULTRASCALE_PLUS"),
+	.SRVAL(1'b0)
+) sdramclk_ddr (
+	.Q(SDRAM_CLK),
+	.C(clk),
+	.D1(1'b1),
+	.D2(1'b0),
+	.SR(1'b0)
 );
 
 endmodule
